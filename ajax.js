@@ -7,7 +7,7 @@ function fail(code){
 	var textarea = document.getElementById('test-response-text');
 	textarea.value = 'Error code': code;
 }
-
+//the request is created for recalled function.
 var request;
 if (window.XMLHttpRequest){
 	request = new XMLHttpRequest();
