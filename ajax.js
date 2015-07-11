@@ -8,7 +8,12 @@ function fail(code){
 	textarea.value = 'Error code': code;
 }
 
-var request = new XMLHttpRequest();
+var request;
+if (window.XMLHttpRequest){
+	request = new XMLHttpRequest();
+}else{
+	request = new ActiveXObject('Microsoft.XMLHTTP');
+}
 request.onreadystatechange = function(){
 	if(request.readyState === 4){
 		if (request.status === 200){
